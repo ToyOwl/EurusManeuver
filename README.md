@@ -39,7 +39,7 @@ This library assists UAVs (Unmanned Aerial Vehicles) in navigating and operating
 ### Inference Performance Metrics
 
 - **MMACS vs Accuracy**
-  - ![MMACS vs Accuracy Graph](reports/Latency (ms)_vs_Accuracy.png)
+  - ![MMACS vs Accuracy Graph](reports/Latency_vs_Accuracy.png)
 
 - **Parameters (M) vs Accuracy**
-  - ![Params vs Accuracy Graph](reports/Params (M)_vs_Accuracy.png)
+  - ![Params vs Accuracy Graph](reports/Params_vs_Accuracy.png)
