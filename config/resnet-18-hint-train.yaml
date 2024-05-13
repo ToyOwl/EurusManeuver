@@ -1,0 +1,72 @@
+train_params:
+  grad-scaler: true
+  optimizer-parameters:
+    betas: !!python/tuple
+      - 0.9
+      - 0.99
+    epsilon: 0.001
+    lookahead: false
+    lookahead-steps: 6
+    lr: 0.005
+    momentum: 0.9
+    nesterov: false
+    optimizer: adamp
+    weight-decay: 2.0e-05
+  scheduler-parameters:
+    cooldown-epochs: 10
+    decay-epochs: 100
+    decay-rate: 0.01
+    epochs: 30
+    lr-cycle-decay: 0.5
+    lr-cycle-limit: 1
+    lr-cycle-mul: 1.0
+    lr-noise: !!python/tuple
+      - 0.42
+      - 0.9
+    lr-noise-pct: 0.67
+    lr-noise-std: 1.0
+    min-lr: 1.0e-06
+    patience-epochs: 10
+    sched: tanh
+    seed: 42
+    track-func: loss
+    warmup-epochs: 3
+    warmup-lr: 0.0001
+  loss: hinton
+  loss-params:
+    hard-mining: false
+    reduction: mean
+    weight:
+      - 0.75
+      - 2.1
+  clip-parameters:
+    gradient: 2.0
+    mode: norm
+session_params:
+  model: resnet18
+  epochs: 5
+  classes: 2
+  target-class: 1
+  log-path: base-logs
+  decision-threshold: 0.5
+  checkpoint-history: 10
+  save-frequency: 50
+  batch-size: 64
+  checkpoint-dir: base-model
+  data-root: f:/dev/datasets/collision_dataset
+  eval-metric: recall
+  initial-checkpoint: null
+  input-size: !!python/tuple
+    - 224
+    - 224
+  mean: !!python/tuple
+    - 0.485
+    - 0.456
+    - 0.406
+  std: !!python/tuple
+    - 0.229
+    - 0.224
+    - 0.225
+
+
+
